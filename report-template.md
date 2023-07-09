@@ -1,31 +1,22 @@
-# Module 12 Report Template
+# Module 20 Credit Risk Classification Report
 
 ## Overview of the Analysis
-
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
-
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+In this analysis, we used logistic regression models to classify credit risk based on financial information. The purpose of the analysis was to predict loan status (healthy loan or high-risk loan) using features such as loan size, interest rate, borrower income, debt-to-income ratio, number of accounts, and derogatory marks. The data was split into training and testing sets, and the models were evaluated based on their accuracy, precision, and recall scores.
 
 ## Results
-
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
-
-* Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
-
-
-
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+- Machine Learning Model 1 (Logistic Regression with Original Data):
+  - Balanced Accuracy Score: 0.9520
+  - Precision Score: 0.85
+  - Recall Score: 0.91
+- Machine Learning Model 2 (Logistic Regression with Resampled Data):
+  - Balanced Accuracy Score: 0.9936
+  - Precision Score: 0.99
+  - Recall Score: 0.99
 
 ## Summary
+Based on the results, both machine learning models performed well in predicting credit risk. However, the logistic regression model with resampled data achieved higher accuracy, precision, and recall scores compared to the model with original data. The model with resampled data showed improved performance in identifying both healthy loans and high-risk loans.
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+In credit risk classification, it is crucial to correctly identify high-risk loans (label '1') to minimize potential losses. Therefore, the model with higher recall (Model 2) is recommended as it achieved a recall score of 0.99 for high-risk loans, indicating that it correctly identified a significant portion of these loans. While the model with original data (Model 1) also performed well, it had a lower recall score of 0.91 for high-risk loans.
 
-If you do not recommend any of the models, please justify your reasoning.
+Considering the higher performance of the resampled model in correctly identifying high-risk loans, we recommend using the logistic regression model with resampled data for credit risk classification tasks.
